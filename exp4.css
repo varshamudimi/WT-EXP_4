@@ -1,0 +1,246 @@
+/* Global Reset and Foundation styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Structural Layout Layout */
+.app-container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+
+/* Sidebar Layout Section */
+.sidebar {
+    width: 260px;
+    background-color: #1e222b;
+    color: #fff;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.brand-logo h2 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #4b89dc;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-link {
+    color: #a0a5b1;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: #2c313e;
+    color: #fff;
+}
+
+/* FEATURE 1: Asymmetric 4-Value Border Radius Container */
+.info-badge {
+    margin-top: auto;
+    background-color: #2c313e;
+    padding: 20px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #cbd5e1;
+    /* top-left, top-right, bottom-right, bottom-left style assignment */
+    border-radius: 20px 4px 30px 12px;
+    border-left: 4px solid #4b89dc;
+}
+
+/* Main Display Dashboard Viewport */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* FEATURE 2: Multiple Backgrounds & Scaled Custom Dimensions */
+.hero-banner {
+    height: 160px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    
+    /* 
+       Combines three independent design assets:
+       1. Floating abstract geometric circle pattern (top-right overlay)
+       2. Secondary brand graphic silhouette 
+       3. Main fluid slate-to-indigo CSS gradient background
+    */
+    background-image: 
+        url('bike1.jpg'), 
+        url('bike1.jpg'), 
+        linear-gradient(135deg, #3a4750 0%, #1a2229 100%);
+    
+    /* Strict layout positioning configurations mapping to individual image indices */
+    background-position: calc(100% - 20px) center, calc(100% - 140px) 15px, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    
+    /* Explicit width/height measurements testing the background-size rules */
+    background-size: 90px 90px, 60px 60px, cover;
+    
+    border-radius: 16px;
+}
+
+.banner-content h1 {
+    font-size: 26px;
+    margin-bottom: 6px;
+}
+
+.banner-content p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* Grid Layout for Interaction Elements */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* FEATURE 3: Uniform 25px Border Rounded Box Wrappers */
+.content-card {
+    background-color: #ffffff;
+    border-radius: 25px; /* Clean 25px continuous corner curves */
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    
+    /* Alternate border configuration assignment testing border-image compatibility placeholder */
+    /* border: 8px solid transparent; */
+    /* border-image: url(border.png) 30 round; */
+}
+
+.content-card h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #1e293b;
+}
+
+/* Internal Components and Typography styling */
+.custom-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-wrap label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 6px;
+}
+
+.input-wrap input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    font-size: 14px;
+    transition: border 0.2s ease;
+}
+
+.input-wrap input:focus {
+    outline: none;
+    border-color: #4b89dc;
+}
+
+.action-button {
+    background-color: #4b89dc;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s ease;
+}
+
+.action-button:hover {
+    background-color: #3572c6;
+}
+
+/* Secondary Component Layout Styles */
+.metrics-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.metric-row:last-child {
+    border-bottom: none;
+}
+
+.status-tag {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-tag.online { background-color: #dcfce7; color: #15803d; }
+.status-tag.warning { background-color: #fef9c3; color: #a16207; }
+
+/* Structural Bottom Academic Info Section */
+.class-footer {
+    background-color: #e2e8f0;
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #475569;
+    border-top: 1px solid #cbd5e1;
+}
+
+.class-footer strong {
+    color: #1e293b;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Adjustments for compact devices */
+@media (max-width: 768px) {
+    .app-container { flex-direction: column; }
+    .sidebar { width: 100%; }
+    .class-footer { flex-direction: column; gap: 15px; text-align: center; }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Web Layout Experiment</title>
+    <link rel="stylesheet" href="exp4.css">
+</head>
+<body>
+
+    <!-- Main Workspace Container -->
+    <div class="app-container">
+        
+        <!-- Sidebar Navigation and Asymmetric Container -->
+        <aside class="sidebar">
+            <div class="brand-logo">
+                <h2>Lab App</h2>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-link active">Dashboard</a>
+                <a href="#" class="nav-link">Analytics</a>
+                <a href="#" class="nav-link">Settings</a>
+            </nav>
+
+            <!-- 1. Asymmetric 4-Value Border Radius Container -->
+            <div class="info-badge">
+                <h4>Experiment Note</h4>
+                <p>Testing multiple background parameters and custom boundary framing models.</p>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            
+            <!-- 2. Header Area using Multiple Backgrounds & Sizes -->
+            <header class="hero-banner">
+                <div class="banner-content">
+                    <h1>Welcome Back</h1>
+                    <p>Web Technology Laboratory — System Dashboard v2.0</p>
+                </div>
+            </header>
+
+            <!-- 3. Form and Content Grid with Uniform 25px Border Radius -->
+            <section class="dashboard-grid">
+                
+                <!-- Profile Setup Form Card -->
+                <div class="content-card">
+                    <h3>Account Registration</h3>
+                    <form class="custom-form">
+                        <div class="input-wrap">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="John Doe">
+                        </div>
+                        <div class="input-wrap">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="john@example.com">
+                        </div>
+                        <div class="input-wrap">
+                            <label>Secure Password</label>
+                            <input type="password" placeholder="••••••••">
+                        </div>
+                        <button type="submit" class="action-button">Create Account</button>
+                    </form>
+                </div>
+
+                <!-- Live Metrics Summary Card -->
+                <div class="content-card metrics-card">
+                    <h3>System Status</h3>
+                    <div class="metric-row">
+                        <span>Database Server</span>
+                        <span class="status-tag online">Online</span>
+                    </div>
+                    <div class="metric-row">
+                        <span>API Gateway</span>
+                        <span class="status-tag online">Active</span>
+                    </div>
+                    <div class="metric-row">
+                        <span>Storage Array</span>
+                        <span class="status-tag warning">92% Full</span>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Mandatory Class Footer -->
+    <footer class="class-footer">
+        <div class="footer-left">
+            <strong>Lab Location</strong>
+            <p>Computer Science Department</p>
+        </div>
+        <div class="footer-right">
+            <p>© 2026-2032. (URK24CS9064) - Web Technology Lab Batch 1. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
